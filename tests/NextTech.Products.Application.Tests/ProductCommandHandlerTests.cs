@@ -155,17 +155,3 @@ namespace NextTech.Products.Application.Tests
         };
     }
 }
-/*
-      public async Task<Unit> Handle(EnableProductCommand request, CancellationToken cancellationToken)
-        {
-            var product = await productRepository.GetAsync(request.Id, cancellationToken) 
-                                ?? throw NotFoundException.For<Domain.Product>(request.Id); ;
-
-            product.Enable();
-
-            await productRepository.UpdateAsync(product, cancellationToken);
-            await productRepository.SaveChangesAsync(cancellationToken);
-
-            return Unit.Value;
-        }
- */
