@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "05b89593-bddf-4ec3-ba8b-f317681a056f",
+		"name": "NextTechCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "CreateProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n  \"Title\": \"product-title-p-330\",\r\n  \"Description\": \"product-description-p-330\",\r\n  \"Stock\": 300,\r\n  \"Active\": true,\r\n  \"Category\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/product-api/v1/Product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product-api",
+								"v1",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductId\": 23,\r\n    \"Title\": \"klmn\",\r\n    \"Description\": \"klmn\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/product-api/v1/Product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product-api",
+								"v1",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/product-api/v1/Product/23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product-api",
+								"v1",
+								"Product",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchProductQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/product-api/v1/Product/search-products?Filter=product&PageNumber=1&PageSize=10&MinimumStock=120&MaximumStock=220",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product-api",
+								"v1",
+								"Product",
+								"search-products"
+							],
+							"query": [
+								{
+									"key": "Filter",
+									"value": "product"
+								},
+								{
+									"key": "PageNumber",
+									"value": "1"
+								},
+								{
+									"key": "PageSize",
+									"value": "10"
+								},
+								{
+									"key": "MinimumStock",
+									"value": "120"
+								},
+								{
+									"key": "MaximumStock",
+									"value": "220"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchProductQuery-Q1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/product-api/v1/Product/search-products?PageNumber=1&PageSize=10&MaximumStock=300",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product-api",
+								"v1",
+								"Product",
+								"search-products"
+							],
+							"query": [
+								{
+									"key": "PageNumber",
+									"value": "1"
+								},
+								{
+									"key": "PageSize",
+									"value": "10"
+								},
+								{
+									"key": "MaximumStock",
+									"value": "300"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DisableProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 4,\r\n  \"comment\": \"pasif yapildi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/product-api/v1/Product/Passive",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product-api",
+								"v1",
+								"Product",
+								"Passive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EnableProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 4,\r\n  \"comment\": \"aktif yapildi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/product-api/v1/Product/Active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product-api",
+								"v1",
+								"Product",
+								"Active"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

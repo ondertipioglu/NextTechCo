@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>1d812df6-c2e5-4a02-be2f-fd4581198f01</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+	<!--<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="$(MicrosoftVisualStudioAzureContainersToolsTargetsVersion)" />
+		<PackageReference Include="Ocelot" Version="$(OcelotVersion)" />
+		<PackageReference Include="Ocelot.Provider.Polly" Version="$(OcelotProviderPollyVersion)" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="$(SwashbuckleAspNetCoreVersion)" />
+
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="$(MicrosoftEntityFrameworkCoreDesignVersion)">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>-->
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Ocelot" Version="17.0.0" />
+		<PackageReference Include="Ocelot.Provider.Polly" Version="17.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Core\NextTech.Core.Serilog\NextTech.Core.Serilog.csproj" />
+	  <ProjectReference Include="..\Core\NextTech.Core.Shared\NextTech.Core.Shared.csproj" />
+	  <ProjectReference Include="..\Core\NextTech.Core\NextTech.Core.csproj" />
+	</ItemGroup>
+
+</Project>

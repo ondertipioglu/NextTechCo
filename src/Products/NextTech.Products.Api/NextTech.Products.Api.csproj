@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<UserSecretsId>25cb4cce-f941-459c-88dd-45e457a79b3e</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..</DockerfileContext>
+	</PropertyGroup>
+	<!--<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="$(MicrosoftVisualStudioAzureContainersToolsTargetsVersion)" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="$(SwashbuckleAspNetCoreVersion)" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="$(MicrosoftAspNetCoreMvcVersioningVersion)" />
+		<PackageReference Include="Ardalis.GuardClauses" Version="$(ArdalisGuardClausesVersion)" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="$(MediatRExtensionsMicrosoftDependencyInjectionVersion)" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="$(SwashbuckleAspNetCoreVersion)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="$(MicrosoftEntityFrameworkCoreDesignVersion)">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+	</ItemGroup>-->
+	<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+		<PackageReference Include="Ardalis.GuardClauses" Version="3.0.1" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Core\NextTech.Core.MediatR\NextTech.Core.MediatR.csproj" />
+		<ProjectReference Include="..\..\Core\NextTech.Core.Serilog\NextTech.Core.Serilog.csproj" />
+		<ProjectReference Include="..\..\Core\NextTech.Core.Shared\NextTech.Core.Shared.csproj" />
+		<ProjectReference Include="..\..\Core\NextTech.Core.WebApi\NextTech.Core.WebApi.csproj" />
+		<ProjectReference Include="..\..\Core\NextTech.Core\NextTech.Core.csproj" />
+		<ProjectReference Include="..\NextTech.Products.Application\NextTech.Products.Application.csproj" />
+		<ProjectReference Include="..\NextTech.Products.Infrastructure.EF\NextTech.Products.Infrastructure.EF.csproj" />
+	</ItemGroup>
+</Project>
